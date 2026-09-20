@@ -1,0 +1,273 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+  --breakpoint-xxxl: 1600px;
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  /* Paymax brand palette (ported from the original stylesheet) */
+  --color-s1: #005151;
+  --color-s2: #ffbf3f;
+  --color-s3: #e8a115;
+  --color-p1: #5ac7a6;
+  --color-p1deep: #1a938a;
+  --color-mainText: #060b1e;
+  --color-bodyText: #3b4a46;
+  --color-strokeColor: #e4e4e4;
+  --color-softBg: #f7f7f7;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #ffffff;
+  --foreground: #060b1e;
+  --card: #ffffff;
+  --card-foreground: #060b1e;
+  --popover: #ffffff;
+  --popover-foreground: #060b1e;
+  --primary: #005151;
+  --primary-foreground: #ffffff;
+  --secondary: #f7f7f7;
+  --secondary-foreground: #060b1e;
+  --muted: #f7f7f7;
+  --muted-foreground: #3b4a46;
+  --accent: #ffbf3f;
+  --accent-foreground: #060b1e;
+  --destructive: #d62828;
+  --destructive-foreground: #ffffff;
+  --border: #e4e4e4;
+  --input: #e4e4e4;
+  --ring: #5ac7a6;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-mainText);
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 120%;
+  }
+
+  p {
+    line-height: 150%;
+  }
+}
+
+/* ---- Layout helpers ported from the original site ---- */
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (min-width: 576px) {
+    max-width: 576px;
+  }
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 992px) {
+    max-width: 992px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1296px;
+    padding-inline: 0;
+  }
+}
+
+@utility stp-30 {
+  padding-top: 4rem;
+  @media (min-width: 768px) {
+    padding-top: 6rem;
+  }
+  @media (min-width: 992px) {
+    padding-top: 7.5rem;
+  }
+}
+
+@utility sbp-30 {
+  padding-bottom: 4rem;
+  @media (min-width: 768px) {
+    padding-bottom: 6rem;
+  }
+  @media (min-width: 992px) {
+    padding-bottom: 7.5rem;
+  }
+}
+
+@utility stp-15 {
+  padding-top: 2rem;
+  @media (min-width: 768px) {
+    padding-top: 3rem;
+  }
+  @media (min-width: 992px) {
+    padding-top: 3.75rem;
+  }
+}
+
+@utility sbp-15 {
+  padding-bottom: 2rem;
+  @media (min-width: 768px) {
+    padding-bottom: 3rem;
+  }
+  @media (min-width: 992px) {
+    padding-bottom: 3.75rem;
+  }
+}
+
+/* ---- Typography scale ported from the original site ---- */
+
+@utility display-2 {
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 2.25rem;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 3.75rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 76px;
+  }
+}
+
+@utility display-3 {
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 1.5rem;
+  @media (min-width: 576px) {
+    font-size: 1.875rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 3rem;
+  }
+}
+
+@utility display-4 {
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 1.5rem;
+  @media (min-width: 576px) {
+    font-size: 1.875rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 2.5rem;
+  }
+}
+
+@utility heading-1 {
+  font-weight: 700;
+  font-size: 28px;
+  @media (min-width: 576px) {
+    font-size: 32px;
+  }
+  @media (min-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+@utility heading-2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  @media (min-width: 576px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 28px;
+  }
+}
+
+@utility heading-3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  @media (min-width: 992px) {
+    font-size: 1.5rem;
+  }
+}
+
+@utility heading-4 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  @media (min-width: 992px) {
+    font-size: 1.25rem;
+  }
+}
+
+@utility heading-5 {
+  font-weight: 600;
+  font-size: 1rem;
+  @media (min-width: 992px) {
+    font-size: 1.125rem;
+  }
+}
+
+/* ---- Decorative treatments ---- */
+
+@utility shadow2 {
+  box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.06);
+}
+
+@utility hero_bg_gradient {
+  background: linear-gradient(252deg, #1a938a 0%, rgba(26, 147, 138, 0) 100.44%);
+}
+
+@utility menu-underline {
+  &:hover {
+    box-shadow: 0px 2px 0px 0px var(--color-s2);
+  }
+}
