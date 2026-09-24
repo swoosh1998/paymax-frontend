@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 
 /** Web3Forms access key. Get it free at https://web3forms.com */
-export const WEB3FORMS_ACCESS_KEY = "YOUR_KEY_HERE";
+export const WEB3FORMS_ACCESS_KEY = "0af785db-d133-41bb-bc70-83ad6369ef66";
 
 /** Sanity headless CMS project id, used later by the Regulatory Updates data layer. */
 export const SANITY_PROJECT_ID = "YOUR_ID_HERE";
