@@ -22,6 +22,7 @@ export type RegulatoryUpdate = {
   body: string[]; // 5-8 substantial paragraphs
   keyPoints: string[]; // 3-5 bullet takeaways
   actionRequired?: string; // what employers must do
+  pdfUrl?: string;
 };
 
 export const regulatoryUpdates: RegulatoryUpdate[] = [
@@ -53,6 +54,7 @@ export const regulatoryUpdates: RegulatoryUpdate[] = [
     ],
     actionRequired:
       "Audit CTC structures against the new 50% wage-definition threshold and re-model PF, gratuity and bonus impact before the codes take effect in your operating states.",
+      pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf", 
   },
   {
     slug: "epfo-higher-pension-processing-update",
