@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ArrowUpRight, Building2, CalendarDays, MapPin } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Building2, CalendarDays, MapPin, Download } from "lucide-react"; // <-- Added Download icon
 
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 import { ContactSection } from "@/components/site/ContactSection";
@@ -106,6 +106,22 @@ function UpdateDetail() {
                 <p className="text-bodyText">{update.actionRequired}</p>
               </div>
             )}
+
+            {/* ---> NAYA PDF DOWNLOAD BUTTON SECTION YAHAN HAI <--- */}
+            {update.pdfUrl && (
+              <div className="mt-8">
+                <a
+                  href={update.pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="inline-flex items-center gap-2 rounded-md bg-s1 px-6 py-3 font-medium text-white duration-300 hover:bg-p1deep"
+                >
+                  <Download className="size-5" /> Download Official PDF
+                </a>
+              </div>
+            )}
+            {/* --------------------------------------------------- */}
 
             <div className="pt-10">
               <Link
