@@ -180,16 +180,16 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <Link to="/" onClick={() => setMobileOpen(false)} className="flex flex-col items-center">
-  <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto object-contain" />
-  <span className="-mt-1 text-[8.5px] font-semibold tracking-wider text-[#65c145] uppercase">
-    Excellence People Practice
-  </span>
-</Link>
-          <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
-            <X className="size-6" />
-          </button>
-        </div>
+  <Link to="/" onClick={() => setMobileOpen(false)} className="flex flex-col items-start">
+    <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto object-contain" />
+    <span className="-mt-1 ml-3 text-[8.5px] font-semibold tracking-wider text-white/90 uppercase">
+      Excellence People Practice
+    </span>
+  </Link>
+  <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
+    <X className="size-6" />
+  </button>
+</div>
         <ul className="mt-8 flex flex-col divide-y divide-white/10">
           <li>
             <Link
