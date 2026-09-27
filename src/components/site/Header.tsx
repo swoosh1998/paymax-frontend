@@ -105,7 +105,7 @@ export function Header() {
               <Menu className="size-7" />
             </button>
             <Link to="/" className="shrink-0">
-              <img src={img.logo} alt="Paymax logo" className="h-9 w-auto sm:h-10" />
+              <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10" />
             </Link>
           </div>
 
@@ -178,7 +178,7 @@ export function Header() {
       >
         <div className="flex items-center justify-between">
           <Link to="/" onClick={() => setMobileOpen(false)}>
-            <img src={img.logo_white} alt="Paymax logo" className="h-9 w-auto" />
+            <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto" />
           </Link>
           <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
             <X className="size-6" />

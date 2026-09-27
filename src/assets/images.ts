@@ -29,11 +29,11 @@ import hero_bg_element1_ from "./img/hero_bg_element1.png";
 import hero_bg_element2_ from "./img/hero_bg_element2.png";
 import hero_bg_element3_ from "./img/hero_bg_element3.png";
 import hero_illus_ from "./img/hero_illus.png";
-import logo_ from "./img/logo.png";
+import paymax_green_ from "./img/paymax_green.svg";
 import logo1_ from "./img/logo1.png";
 import logo2_ from "./img/logo2.png";
 import logo3_ from "./img/logo3.png";
-import logo_white_ from "./img/logo_white.png";
+import paymax_white_ from "./img/paymax_white.svg";
 import never_worry_img_ from "./img/never_worry_img.png";
 import recent_post_img1_ from "./img/recent_post_img1.png";
 import recent_post_img2_ from "./img/recent_post_img2.png";
@@ -88,11 +88,11 @@ export const img = {
   "hero_bg_element2": hero_bg_element2_,
   "hero_bg_element3": hero_bg_element3_,
   "hero_illus": hero_illus_,
-  "logo": logo_,
+  "paymax_green": paymax_green_,
   "logo1": logo1_,
   "logo2": logo2_,
   "logo3": logo3_,
-  "logo_white": logo_white_,
+  "paymax_white": paymax_white_,
   "never_worry_img": never_worry_img_,
   "recent_post_img1": recent_post_img1_,
   "recent_post_img2": recent_post_img2_,
