@@ -96,21 +96,21 @@ export function Header() {
       >
         <div className="container flex items-center justify-between py-5 text-s1">
           <div className="flex items-center justify-start gap-3">
-            <button
-              type="button"
-              aria-label="Open menu"
-              className="text-3xl lg:hidden"
-              onClick={() => setMobileOpen(true)}
-            >
-              <Menu className="size-7" />
-            </button>
-            <Link to="/" className="shrink-0 flex flex-col items-center">
-  <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10 object-contain" />
-  <span className="-mt-1 text-[8.5px] font-semibold tracking-wider text-[#65c145] uppercase">
-    Excellence People Practice
-  </span>
-</Link>
-          </div>
+  <button
+    type="button"
+    aria-label="Open menu"
+    className="text-3xl lg:hidden"
+    onClick={() => setMobileOpen(true)}
+  >
+    <Menu className="size-7" />
+  </button>
+  <Link to="/" className="shrink-0 flex flex-col items-start">
+    <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10 object-contain" />
+    <span className="-mt-1 ml-3 text-[8.5px] font-semibold tracking-wider text-[#65c145] uppercase">
+      Excellence People Practice
+    </span>
+  </Link>
+</div>
 
           <nav className="max-lg:hidden">
             <ul className="flex items-center justify-center gap-2 font-medium">
