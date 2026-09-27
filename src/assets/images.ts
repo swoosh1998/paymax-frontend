@@ -21,7 +21,7 @@ import breadcrumb_img_4_ from "./img/breadcrumb_img_4.png";
 import breadcrump_icon_ from "./img/breadcrump_icon.png";
 import circleIcon_ from "./img/circleIcon.png";
 import comment_people_1_ from "./img/comment_people_1.png";
-import contact_illus_ from "./img/contact_illus.png";
+import contact_illus_ from "./img/contact_illus1234.png";
 import contact_page_img_ from "./img/contact_page_img.png";
 import counter_bg_ from "./img/counter_bg.png";
 import faq_illus_ from "./img/faq_illus.png";
