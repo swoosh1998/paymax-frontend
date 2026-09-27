@@ -37,7 +37,7 @@ export function Footer() {
         <div className="container stp-30 sbp-30 grid grid-cols-12 gap-8">
           <div className="col-span-12 flex flex-col gap-6 min-[450px]:col-span-6 lg:col-span-3 lg:gap-8">
             <Link to="/">
-              <img src={img.logo_white} alt="Paymax" className="h-10 w-auto" />
+              <img src={img.paymax_white} alt="Paymax" className="h-10 w-auto" />
             </Link>
             <p>
               Your trusted partner in HR, payroll and statutory compliance. At Paymax our focus is on
