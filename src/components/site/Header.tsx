@@ -104,9 +104,9 @@ export function Header() {
             >
               <Menu className="size-7" />
             </button>
-            <Link to="/" className="shrink-0 flex flex-col">
-   <img src={img.paymax_green} alt="Paymax logo" className="h-7 w-auto sm:h-8" />
-  <span className="text-[9px] font-semibold tracking-wider text-bodyText uppercase mt-0.5">
+            <Link to="/" className="shrink-0 flex flex-col items-start">
+  <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10 object-contain" />
+  <span className="text-[9px] font-medium tracking-tight text-bodyText uppercase w-full text-center">
     Excellence People Practice
   </span>
 </Link>
@@ -180,9 +180,9 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <Link to="/" onClick={() => setMobileOpen(false)} className="flex flex-col">
-  <img src={img.paymax_white} alt="Paymax logo" className="h-7 w-auto" />
-  <span className="text-[9px] font-semibold tracking-wider text-white/70 uppercase mt-0.5">
+          <Link to="/" onClick={() => setMobileOpen(false)} className="flex flex-col items-start">
+  <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto object-contain" />
+  <span className="text-[9px] font-medium tracking-tight text-white/70 uppercase w-full text-center">
     Excellence People Practice
   </span>
 </Link>
