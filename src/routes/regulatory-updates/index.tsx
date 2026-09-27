@@ -80,6 +80,11 @@ function RegulatoryUpdatesPage() {
     setCurrentPage(1);
   }, [query, month, state, act]);
 
+  // Scroll to top of the list whenever pagination changes
+  useEffect(() => {
+    window.scrollTo({ top: 400, behavior: "smooth" });
+  }, [currentPage]);
+
   // Pagination calculations
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
   const paginatedUpdates = useMemo(() => {
