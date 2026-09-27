@@ -53,8 +53,8 @@ export const teamMembers = [
     role: "Manager — Attendance & Systems",
     image: img.team_image2,
     bio: "Vikram configures attendance and leave systems and integrates them with payroll so every input is clean and audit-ready.",
-    email: "alert@paymaxonline.in",
-    phone: "+91 9810442861",
+    email: "vikram@paymaxonline.com",
+    phone: "+91 9164837452",
     linkedin: "#",
   },
   {
@@ -63,8 +63,8 @@ export const teamMembers = [
     role: "Client Relationship Lead",
     image: img.team_image5,
     bio: "Neha is the first point of contact for clients, coordinating service delivery, reporting cadence and escalations.",
-    email: "alert@paymaxonline.in",
-    phone: "+91 9810442861",
+    email: "neha@paymaxonline.com",
+    phone: "+91 9756936409",
     linkedin: "#",
   },
 ];
