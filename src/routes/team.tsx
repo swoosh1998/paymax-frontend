@@ -72,12 +72,6 @@ function TeamPage() {
                       >
                         <Linkedin className="size-5" />
                       </a>
-                      <Link
-                        to="/team-details"
-                        className="ml-auto font-medium text-s1 duration-300 hover:text-p1deep"
-                      >
-                        View profile
-                      </Link>
                     </div>
                   </div>
                 </div>
