@@ -6,7 +6,6 @@ export const aboutLinks: NavLink[] = [
   { label: "About Us", to: "/about" },
   { label: "Vision & Mission", to: "/vision-mission" },
   { label: "Our Team", to: "/team" },
-  { label: "Team Details", to: "/team-details" },
   { label: "Privacy Policy", to: "/privacy-policy" },
   { label: "Terms and Condition", to: "/terms-and-conditions" },
 ];
