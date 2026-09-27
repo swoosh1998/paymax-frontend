@@ -38,7 +38,7 @@ export function Footer() {
         <div className="col-span-12 flex flex-col gap-6 min-[450px]:col-span-6 lg:col-span-3 lg:gap-8">
   <Link to="/" className="flex flex-col items-start">
     <img src={img.paymax_white} alt="Paymax" className="h-10 w-auto object-contain" />
-    <span className="-mt-1 text-[8.5px] font-semibold tracking-wider text-white/90 uppercase">
+    <span className="-mt-1 ml-3 text-[8.5px] font-semibold tracking-wider text-white/90 uppercase">
       Excellence People Practice
     </span>
   </Link>
