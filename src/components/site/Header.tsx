@@ -126,7 +126,7 @@ export function Header() {
               <li>
                 <Link
                   to="/regulatory-updates"
-                  className="menu-underline rounded-lg px-2 py-3 duration-500"
+                  className="menu-underline rounded-lg px-2 py-3 duration-500 animate-pulse text-p1deep font-semibold bg-softBg/60 px-3"
                   activeProps={{ className: "text-p1deep" }}
                 >
                   Regulatory Updates
@@ -200,9 +200,9 @@ export function Header() {
             <Link
               to="/regulatory-updates"
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-lg font-medium"
+              className="block py-3 text-lg font-medium animate-pulse text-s2 font-bold"
             >
-              Regulatory Updates
+              Regulatory Updates ✨
             </Link>
           </li>
           <li>
