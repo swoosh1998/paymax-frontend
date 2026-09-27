@@ -96,21 +96,21 @@ export function Header() {
       >
         <div className="container flex items-center justify-between py-5 text-s1">
           <div className="flex items-center justify-start gap-3">
-  <button
-    type="button"
-    aria-label="Open menu"
-    className="text-3xl lg:hidden"
-    onClick={() => setMobileOpen(true)}
-  >
-    <Menu className="size-7" />
-  </button>
-  <Link to="/" className="shrink-0 flex flex-col items-start">
-    <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10 object-contain" />
-    <span className="-mt-1 ml-3 text-[8.5px] font-semibold tracking-wider text-[#65c145] uppercase">
-      Excellence People Practice
-    </span>
-  </Link>
-</div>
+            <button
+              type="button"
+              aria-label="Open menu"
+              className="text-3xl lg:hidden"
+              onClick={() => setMobileOpen(true)}
+            >
+              <Menu className="size-7" />
+            </button>
+            <Link to="/" className="shrink-0 flex flex-col items-start">
+              <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10 object-contain" />
+              <span className="-mt-1 ml-2 sm:ml-3 text-[7px] sm:text-[8.5px] font-semibold tracking-wider text-[#65c145] uppercase whitespace-nowrap">
+                Excellence People Practice
+              </span>
+            </Link>
+          </div>
 
           <nav className="max-lg:hidden">
             <ul className="flex items-center justify-center gap-2 font-medium">
@@ -180,16 +180,16 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between">
-  <Link to="/" onClick={() => setMobileOpen(false)} className="flex flex-col items-start">
-    <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto object-contain" />
-    <span className="-mt-1 ml-3 text-[8.5px] font-semibold tracking-wider text-white/90 uppercase">
-      Excellence People Practice
-    </span>
-  </Link>
-  <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
-    <X className="size-6" />
-  </button>
-</div>
+          <Link to="/" onClick={() => setMobileOpen(false)} className="flex flex-col items-start">
+            <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto object-contain" />
+            <span className="-mt-1 ml-2 text-[7px] font-semibold tracking-wider text-white/90 uppercase whitespace-nowrap">
+              Excellence People Practice
+            </span>
+          </Link>
+          <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
+            <X className="size-6" />
+          </button>
+        </div>
         <ul className="mt-8 flex flex-col divide-y divide-white/10">
           <li>
             <Link
