@@ -104,9 +104,12 @@ export function Header() {
             >
               <Menu className="size-7" />
             </button>
-            <Link to="/" className="shrink-0">
-              <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10" />
-            </Link>
+            <Link to="/" className="shrink-0 flex flex-col">
+   <img src={img.paymax_green} alt="Paymax logo" className="h-7 w-auto sm:h-8" />
+  <span className="text-[9px] font-semibold tracking-wider text-bodyText uppercase mt-0.5">
+    Excellence People Practice
+  </span>
+</Link>
           </div>
 
           <nav className="max-lg:hidden">
@@ -177,9 +180,12 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <Link to="/" onClick={() => setMobileOpen(false)}>
-            <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto" />
-          </Link>
+          <Link to="/" onClick={() => setMobileOpen(false)} className="flex flex-col">
+  <img src={img.paymax_white} alt="Paymax logo" className="h-7 w-auto" />
+  <span className="text-[9px] font-semibold tracking-wider text-white/70 uppercase mt-0.5">
+    Excellence People Practice
+  </span>
+</Link>
           <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
             <X className="size-6" />
           </button>
