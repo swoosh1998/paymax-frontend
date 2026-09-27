@@ -129,7 +129,7 @@ export function Header() {
                   className="menu-underline rounded-lg px-3 py-3 duration-500 font-semibold text-amber-600 animate-pulse [&.active]:animate-none [&.active]:text-p1deep [&.active]:bg-transparent [&.active]:font-medium"
                   activeProps={{ className: "!text-p1deep !animate-none !bg-transparent !font-medium" }}
                 >
-                  Regulatory Updates ✨
+                  Regulatory Updates
                 </Link>
               </li>
               <li>
