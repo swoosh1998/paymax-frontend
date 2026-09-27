@@ -469,7 +469,7 @@ function Index() {
             </Link>
           </div>
           <div className="col-span-12 lg:col-span-6">
-            <img src={img.contact_illus} alt="" className="w-full" />
+            <img src={img.contact_illus1234} alt="" className="w-full" />
           </div>
         </div>
       </section>
