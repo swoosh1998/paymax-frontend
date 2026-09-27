@@ -203,7 +203,7 @@ export function Header() {
               className="block py-3 text-lg font-medium text-amber-400 animate-pulse [&.active]:animate-none [&.active]:text-white [&.active]:font-normal"
               activeProps={{ className: "!text-white !animate-none !font-normal" }}
             >
-              Regulatory Updates ✨
+              Regulatory Updates
             </Link>
           </li>
           <li>
