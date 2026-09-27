@@ -36,12 +36,12 @@ export function Footer() {
       <footer className="bg-mainText text-white/60">
         <div className="container stp-30 sbp-30 grid grid-cols-12 gap-8">
           <div className="col-span-12 flex flex-col gap-6 min-[450px]:col-span-6 lg:col-span-3 lg:gap-8">
-  <Link to="/" className="flex flex-col items-start">
-  <img src={img.paymax_white} alt="Paymax" className="h-10 w-auto object-contain -ml-2 sm:-ml-3" />
-  <span className="-mt-1 text-[8.5px] font-semibold tracking-wider text-white/90 uppercase pl-0.5">
-    Excellence People Practice
-  </span>
-</Link>
+  <Link to="/" className="flex flex-col items-center">
+    <img src={img.paymax_white} alt="Paymax" className="h-10 w-auto object-contain" />
+    <span className="-mt-1 text-[8.5px] font-semibold tracking-wider text-white/90 uppercase">
+      Excellence People Practice
+    </span>
+  </Link>
   <p>
     Your trusted partner in HR, payroll and statutory compliance. At Paymax our focus is on
     delivering precision, efficiency and tailored services to our clients and their
