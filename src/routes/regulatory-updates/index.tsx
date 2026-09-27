@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, CalendarDays, MapPin, Search, X } from "lucide-react";
-import { useMemo, useState } from "react";
+import { ArrowUpRight, CalendarDays, MapPin, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useMemo, useState, useEffect } from "react";
 
 import { Breadcrumb } from "@/components/site/Breadcrumb";
 import {
@@ -28,7 +28,6 @@ export const Route = createFileRoute("/regulatory-updates/")({
       },
     ],
   }),
-  // 1. Yahan loader add kiya gaya hai Sanity se asynchronous data laane ke liye
   loader: async () => {
     const all = await getRegulatoryUpdates();
     const states = await getUpdateStates();
@@ -36,7 +35,6 @@ export const Route = createFileRoute("/regulatory-updates/")({
     const months = await getUpdateMonths();
     return { all, states, acts, months };
   },
-  // ---> YAHAN PENDING COMPONENT ADD KARIYE <---
   pendingComponent: () => (
     <div className="flex min-h-[60vh] items-center justify-center">
       <p className="text-lg font-medium text-bodyText animate-pulse">Loading compliance updates...</p>
@@ -45,14 +43,16 @@ export const Route = createFileRoute("/regulatory-updates/")({
   component: RegulatoryUpdatesPage,
 });
 
+const ITEMS_PER_PAGE = 6;
+
 function RegulatoryUpdatesPage() {
-  // 2. Data ab useMemo ki jagah direct loader se aayega
   const { all, states, acts, months } = Route.useLoaderData();
 
   const [query, setQuery] = useState("");
   const [month, setMonth] = useState("");
   const [state, setState] = useState("");
   const [act, setAct] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -74,6 +74,18 @@ function RegulatoryUpdatesPage() {
       return true;
     });
   }, [all, query, month, state, act]);
+
+  // Reset to page 1 whenever filters or search query change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query, month, state, act]);
+
+  // Pagination calculations
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const paginatedUpdates = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filtered.slice(start, start + ITEMS_PER_PAGE);
+  }, [filtered, currentPage]);
 
   const hasFilters = Boolean(query || month || state || act);
   const selectClass =
@@ -175,7 +187,7 @@ function RegulatoryUpdatesPage() {
           </div>
 
           <div className="stp-15 grid grid-cols-12 gap-6">
-            {filtered.map((u) => (
+            {paginatedUpdates.map((u) => (
               <article
                 key={u.slug}
                 className="col-span-12 flex flex-col border border-strokeColor bg-white p-6 duration-500 hover:border-mainText hover:shadow2 md:col-span-6 lg:col-span-4 xl:p-8"
@@ -218,6 +230,35 @@ function RegulatoryUpdatesPage() {
               </div>
             )}
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 pt-12">
+              <button
+                type="button"
+                onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+                disabled={currentPage === 1}
+                className="flex items-center gap-1 rounded-lg border border-strokeColor bg-white px-4 py-2 text-sm font-medium duration-300 hover:border-mainText disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft className="size-4" /> Previous
+              </button>
+
+              <div className="flex items-center gap-1 px-3">
+                <span className="text-sm font-medium text-mainText">
+                  Page {currentPage} of {totalPages}
+                </span>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
+                disabled={currentPage === totalPages}
+                className="flex items-center gap-1 rounded-lg border border-strokeColor bg-white px-4 py-2 text-sm font-medium duration-300 hover:border-mainText disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                Next <ChevronRight className="size-4" />
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
