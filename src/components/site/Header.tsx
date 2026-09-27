@@ -126,10 +126,10 @@ export function Header() {
               <li>
                 <Link
                   to="/regulatory-updates"
-                  className="menu-underline rounded-lg px-2 py-3 duration-500 animate-pulse text-p1deep font-semibold bg-softBg/60 px-3"
-                  activeProps={{ className: "text-p1deep" }}
+                  className="menu-underline rounded-lg px-3 py-3 duration-500 font-semibold text-amber-600 animate-pulse [&.active]:animate-none [&.active]:text-p1deep [&.active]:bg-transparent [&.active]:font-medium"
+                  activeProps={{ className: "!text-p1deep !animate-none !bg-transparent !font-medium" }}
                 >
-                  Regulatory Updates
+                  Regulatory Updates ✨
                 </Link>
               </li>
               <li>
@@ -200,7 +200,8 @@ export function Header() {
             <Link
               to="/regulatory-updates"
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-lg font-medium animate-pulse text-s2 font-bold"
+              className="block py-3 text-lg font-medium text-amber-400 animate-pulse [&.active]:animate-none [&.active]:text-white [&.active]:font-normal"
+              activeProps={{ className: "!text-white !animate-none !font-normal" }}
             >
               Regulatory Updates ✨
             </Link>
