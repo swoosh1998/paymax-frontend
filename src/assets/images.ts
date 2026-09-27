@@ -80,7 +80,7 @@ export const img = {
   "breadcrump_icon": breadcrump_icon_,
   "circleIcon": circleIcon_,
   "comment_people_1": comment_people_1_,
-  "contact_illus": contact_illus_,
+  "contact_illus1234": contact_illus1234_,
   "contact_page_img": contact_page_img_,
   "counter_bg": counter_bg_,
   "faq_illus": faq_illus_,
