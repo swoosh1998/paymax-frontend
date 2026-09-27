@@ -78,10 +78,6 @@ function TeamPage() {
               </div>
             ))}
           </div>
-          <p className="pt-8 text-sm text-bodyText">
-            Team photos are placeholders. Names, roles and biographies can be edited in{" "}
-            <code className="font-mono">src/data/teamData.js</code>.
-          </p>
         </div>
       </section>
 
