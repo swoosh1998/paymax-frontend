@@ -20,7 +20,7 @@ function DesktopDropdown({ label, links }: { label: string; links: NavLink[] }) 
               <Link
                 to={l.to}
                 className="block px-6 duration-500 hover:ml-2 hover:text-s2"
-                activeProps={{ className: "text-s2" }}
+                activeProps={{ className: "text-s2 font-semibold" }}
               >
                 {l.label}
               </Link>
@@ -104,12 +104,10 @@ export function Header() {
             >
               <Menu className="size-7" />
             </button>
-            <Link to="/" className="shrink-0 flex flex-col items-center">
-  <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10 object-contain" />
-  <span className="-mt-1 text-[8.5px] font-semibold tracking-wider text-[#65c145] uppercase">
-    Excellence People Practice
-  </span>
-</Link>
+            {/* Logo without separate tagline span */}
+            <Link to="/" className="shrink-0">
+              <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10 object-contain" />
+            </Link>
           </div>
 
           <nav className="max-lg:hidden">
@@ -180,12 +178,10 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <Link to="/" onClick={() => setMobileOpen(false)} className="flex flex-col items-center">
-  <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto object-contain" />
-  <span className="-mt-1 text-[8.5px] font-semibold tracking-wider text-[#65c145] uppercase">
-    Excellence People Practice
-  </span>
-</Link>
+          {/* Mobile Logo without separate tagline span */}
+          <Link to="/" onClick={() => setMobileOpen(false)} className="shrink-0">
+            <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto object-contain" />
+          </Link>
           <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
             <X className="size-6" />
           </button>

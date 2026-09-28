@@ -35,32 +35,29 @@ export function Footer() {
       <NewsletterCta />
       <footer className="bg-mainText text-white/60">
         <div className="container stp-30 sbp-30 grid grid-cols-12 gap-8">
-        <div className="col-span-12 flex flex-col gap-6 min-[450px]:col-span-6 lg:col-span-3 lg:gap-8">
-  <Link to="/" className="flex flex-col items-start">
-    <img src={img.paymax_white} alt="Paymax" className="h-10 w-auto object-contain" />
-    <span className="-mt-1 ml-3 text-[8.5px] font-semibold tracking-wider text-white/90 uppercase">
-      Excellence People Practice
-    </span>
-  </Link>
-  <p>
-    Your trusted partner in HR, payroll and statutory compliance. At Paymax our focus is on
-    delivering precision, efficiency and tailored services to our clients and their
-    businesses.
-  </p>
-  <ul className="flex items-center justify-start gap-2">
-    {socials.map(({ label, Icon }) => (
-      <li key={label}>
-        <a
-          href="#"
-          aria-label={label}
-          className="flex size-10 items-center justify-center rounded-full bg-s1/50 text-white duration-500 hover:-translate-y-1 hover:bg-s1"
-        >
-          <Icon className="size-5" />
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>
+          <div className="col-span-12 flex flex-col gap-6 min-[450px]:col-span-6 lg:col-span-3 lg:gap-8">
+            <Link to="/" className="shrink-0">
+              <img src={img.paymax_white} alt="Paymax" className="h-10 w-auto object-contain" />
+            </Link>
+            <p>
+              Your trusted partner in HR, payroll and statutory compliance. At Paymax our focus is on
+              delivering precision, efficiency and tailored services to our clients and their
+              businesses.
+            </p>
+            <ul className="flex items-center justify-start gap-2">
+              {socials.map(({ label, Icon }) => (
+                <li key={label}>
+                  <a
+                    href="#"
+                    aria-label={label}
+                    className="flex size-10 items-center justify-center rounded-full bg-s1/50 text-white duration-500 hover:-translate-y-1 hover:bg-s1"
+                  >
+                    <Icon className="size-5" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div className="col-span-12 min-[400px]:col-span-6 lg:col-span-3 xl:pl-20">
             <h4 className="heading-4 relative mb-6 pb-2 text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-[20%] after:bg-p1 after:duration-500 hover:after:w-[40%]">
