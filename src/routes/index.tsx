@@ -234,7 +234,7 @@ function Index() {
           </p>
         </div>
         <div className="col-span-12 flex flex-wrap items-center justify-start gap-8 pt-4 sm:col-span-6 xl:col-span-8 xl:justify-end xl:gap-12">
-          {[img.logo1, img.logo2, img.logo3, img.logo1].map((src, i) => (
+          {[img.logo1, img.logo2, img.logo3, img.logo4].map((src, i) => (
             <img
               key={i}
               src={src}

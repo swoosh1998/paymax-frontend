@@ -33,6 +33,7 @@ import paymax_green_ from "./img/paymax_green.svg";
 import logo1_ from "./img/logo1.png";
 import logo2_ from "./img/logo2.png";
 import logo3_ from "./img/logo3.png";
+import logo4_ from "./img/logo4.png";
 import paymax_white_ from "./img/paymax_white.svg";
 import never_worry_img_ from "./img/never_worry_img.png";
 import recent_post_img1_ from "./img/recent_post_img1.png";
@@ -92,6 +93,7 @@ export const img = {
   "logo1": logo1_,
   "logo2": logo2_,
   "logo3": logo3_,
+  "logo4": logo4_,
   "paymax_white": paymax_white_,
   "never_worry_img": never_worry_img_,
   "recent_post_img1": recent_post_img1_,
