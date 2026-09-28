@@ -104,9 +104,8 @@ export function Header() {
             >
               <Menu className="size-7" />
             </button>
-            {/* Logo without separate tagline span */}
             <Link to="/" className="shrink-0">
-              <img src={img.paymax_green} alt="Paymax logo" className="h-9 w-auto sm:h-10 object-contain" />
+              <img src={img.paymax_green} alt="Paymax logo" className="h-11 w-auto sm:h-12 object-contain" />
             </Link>
           </div>
 
@@ -178,9 +177,8 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between">
-          {/* Mobile Logo without separate tagline span */}
           <Link to="/" onClick={() => setMobileOpen(false)} className="shrink-0">
-            <img src={img.paymax_white} alt="Paymax logo" className="h-9 w-auto object-contain" />
+            <img src={img.paymax_white} alt="Paymax logo" className="h-11 w-auto object-contain" />
           </Link>
           <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
             <X className="size-6" />

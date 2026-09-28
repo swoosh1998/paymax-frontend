@@ -35,11 +35,11 @@ export function Footer() {
       <NewsletterCta />
       <footer className="bg-mainText text-white/60">
         <div className="container stp-30 sbp-30 grid grid-cols-12 gap-8">
-          <div className="col-span-12 flex flex-col gap-6 min-[450px]:col-span-6 lg:col-span-3 lg:gap-8">
+          <div className="col-span-12 flex flex-col items-start gap-6 min-[450px]:col-span-6 lg:col-span-3 lg:gap-8">
             <Link to="/" className="shrink-0">
-              <img src={img.paymax_white} alt="Paymax" className="h-10 w-auto object-contain" />
+              <img src={img.paymax_white} alt="Paymax" className="h-12 w-auto object-contain" />
             </Link>
-            <p>
+            <p className="text-left">
               Your trusted partner in HR, payroll and statutory compliance. At Paymax our focus is on
               delivering precision, efficiency and tailored services to our clients and their
               businesses.
@@ -119,7 +119,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <p className="flex items-start justify-start gap-2">
+                <p className="flex items-start justify-start gap-2 text-left">
                   <MapPin className="mt-1 size-5 shrink-0" />
                   Registered Office: D-100 Bhajanpura, Shahdara, North East Delhi-110053
                 </p>
