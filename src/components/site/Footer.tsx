@@ -36,7 +36,7 @@ export function Footer() {
       <footer className="bg-mainText text-white/60">
         <div className="container stp-30 sbp-30 grid grid-cols-12 gap-8">
           <div className="col-span-12 flex flex-col items-start gap-6 min-[450px]:col-span-6 lg:col-span-3 lg:gap-8">
-            <Link to="/" className="shrink-0 -ml-1.5">
+            <Link to="/" className="shrink-0">
               <img src={img.paymax_white} alt="Paymax" className="h-12 w-auto object-contain" />
             </Link>
             <p className="text-left">
