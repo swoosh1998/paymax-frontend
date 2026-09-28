@@ -1,4 +1,4 @@
-import { Link, useMatchRoute } from "@tanstack/react-router";
+import { Link, useMatchRoute, useLocation } from "@tanstack/react-router";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -8,11 +8,14 @@ import { aboutLinks, serviceLinks, type NavLink } from "./nav-data";
 
 function DesktopDropdown({ label, links }: { label: string; links: NavLink[] }) {
   const matchRoute = useMatchRoute();
+  const location = useLocation();
   
-  // Sirf tabhi active dikhaye jab hum specifically service routes par hon
+  // SSR-safe path checking using router location instead of window
+  const currentPath = location.pathname;
   const isServicesDropdown = label === "Services";
+  
   const isAnyChildActive = isServicesDropdown 
-    ? links.some((l) => matchRoute({ to: l.to, fuzzy: false }) || window.location.pathname.startsWith(l.to))
+    ? links.some((l) => matchRoute({ to: l.to, fuzzy: false }) || currentPath.startsWith(l.to))
     : links.some((l) => matchRoute({ to: l.to, fuzzy: true }));
 
   return (
@@ -137,7 +140,7 @@ export function Header() {
                 </Link>
               </li>
               <DesktopDropdown label="About Us" links={aboutLinks} />
-              <DesktopDropdown label="Services" links= {serviceLinks} />
+              <DesktopDropdown label="Services" links={serviceLinks} />
               <li>
                 <Link
                   to="/regulatory-updates"
