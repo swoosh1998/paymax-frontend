@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useMatchRoute } from "@tanstack/react-router";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -7,10 +7,19 @@ import { site } from "@/config/site";
 import { aboutLinks, serviceLinks, type NavLink } from "./nav-data";
 
 function DesktopDropdown({ label, links }: { label: string; links: NavLink[] }) {
+  const matchRoute = useMatchRoute();
+  
+  // Check karta hai ki kya current URL in links me se kisi ka sub-route hai
+  const isAnyChildActive = links.some((l) => matchRoute({ to: l.to, fuzzy: true }));
+
   return (
     <li>
       <div className="group relative cursor-pointer">
-        <div className="menu-underline flex items-center justify-center gap-1 rounded-lg px-2 py-3 duration-500">
+        <div
+          className={`menu-underline flex items-center justify-center gap-1 rounded-lg px-2 py-3 duration-500 ${
+            isAnyChildActive ? "text-p1deep" : ""
+          }`}
+        >
           {label}
           <ChevronDown className="size-4 duration-500 group-hover:rotate-180" />
         </div>
@@ -20,7 +29,7 @@ function DesktopDropdown({ label, links }: { label: string; links: NavLink[] }) 
               <Link
                 to={l.to}
                 className="block px-6 duration-500 hover:ml-2 hover:text-s2"
-                activeProps={{ className: "text-s2" }}
+                activeProps={{ className: "text-s2 font-semibold" }}
               >
                 {l.label}
               </Link>
