@@ -126,7 +126,7 @@ const pricing = [
     Icon: FilePlus2,
     name: "Payroll Process & Outsourcing",
     text: "Eliminate the complexity and risk of sourcing, managing and delivering payroll.",
-    price: "₹2500",
+    price: "₹5000",
     popular: true,
     items: [
       "Payroll processing and generation of salary register",
@@ -156,7 +156,7 @@ const pricing = [
     Icon: Users,
     name: "HR Operations",
     text: "Run a compliant, documented and responsive HR function without adding headcount.",
-    price: "₹4500",
+    price: "₹5000",
     popular: false,
     items: [
       "Onboarding, documentation and employee master data",
